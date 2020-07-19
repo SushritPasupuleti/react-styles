@@ -1,8 +1,21 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import styled from 'styled-components';
 
 function App() {
+
+  const Button = styled.a`
+  display: inline-block;
+  border-radius: 3px;
+  padding: 0.5rem 0;
+  margin: 0.5rem 1rem;
+  width: 11rem;
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+`
+
   return (
     <div className="App">
       <header className="App-header">
@@ -18,6 +31,7 @@ function App() {
         >
           Learn React
         </a>
+        <Button>CyberPunk 2077</Button>
       </header>
     </div>
   );
