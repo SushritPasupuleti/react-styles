@@ -5,15 +5,19 @@ import styled from 'styled-components';
 
 function App() {
 
-  const Button = styled.a`
-  display: inline-block;
-  border-radius: 3px;
-  padding: 0.5rem 0;
-  margin: 0.5rem 1rem;
-  width: 11rem;
-  background: transparent;
-  color: white;
-  border: 2px solid white;
+  const ClipPathButton = styled.button`
+  width: 230px;
+  height: 60px; 
+  border: 0;
+  outline: none;
+  background-color: #fcee09;
+  cursor: pointer;
+  position: relative;
+  font-family: Tomorrow, sans-serif;
+  font-size: .85rem;
+  text-transform: uppercase;
+  color: #050a0e;
+  clip-path: polygon(92% 0, 100% 25%, 100% 100%, 8% 100%, 0% 75%, 0 0);
 `
 
   return (
@@ -31,7 +35,7 @@ function App() {
         >
           Learn React
         </a>
-        <Button>CyberPunk 2077</Button>
+        <ClipPathButton>CyberPunk 2077</ClipPathButton>
       </header>
     </div>
   );
