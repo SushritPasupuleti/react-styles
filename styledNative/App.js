@@ -15,6 +15,7 @@ import {
   Text,
   StatusBar,
 } from 'react-native';
+import styled from 'styled-components';
 
 import {
   Header,
@@ -25,6 +26,18 @@ import {
 } from 'react-native/Libraries/NewAppScreen';
 
 const App: () => React$Node = () => {
+
+  const ClipPathButton = styled.View`
+  width: 230px;
+  height: 60px; 
+  border: 0;
+  background-color: #fcee09;
+  position: relative;
+  font-size: .85;
+  text-transform: uppercase;
+  color: #050a0e;
+`
+
   return (
     <>
       <StatusBar barStyle="dark-content" />
@@ -46,25 +59,9 @@ const App: () => React$Node = () => {
                 screen and then come back to see your edits.
               </Text>
             </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>See Your Changes</Text>
-              <Text style={styles.sectionDescription}>
-                <ReloadInstructions />
-              </Text>
+            <View>
+              <ClipPathButton><Text>CyberPunk 2077</Text></ClipPathButton>
             </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Debug</Text>
-              <Text style={styles.sectionDescription}>
-                <DebugInstructions />
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Learn More</Text>
-              <Text style={styles.sectionDescription}>
-                Read the docs to discover what to do next:
-              </Text>
-            </View>
-            <LearnMoreLinks />
           </View>
         </ScrollView>
       </SafeAreaView>
